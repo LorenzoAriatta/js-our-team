@@ -6,10 +6,28 @@ console.log('JS OK!');
 // -------------------- / FUNCTIONS -------------------- //
 
 //card creation
-//function createCards() {
+function createCards() {
 
+    for (let i = 0; i < teamMembers.length; i++) {
 
-//}
+        teamContainer.appendChild(divCard);
+        divCard.classList.add('team-card');
+        teamCard.appendChild(divImage);
+        divImage.appendChild(img);
+        img.src = teamMembers[i].imgUrl;
+        divImage.classList.add('card-image');
+        teamCard.appendChild(divText);
+        divText.classList.add('card-text');
+        let nameOfMember = document.createElement('h3');
+        nameOfMember.innerText = teamMembers[i].name;
+        divText.appendChild(nameOfMember);
+        let roleOfMember = document.createElement('p');
+        roleOfMember.innerText = teamMembers[i].role;
+        divText.appendChild(roleOfMember);
+
+    }
+
+}
 
 
 
@@ -80,22 +98,5 @@ console.log(teamMembers.length);
 
 
 
-for (let i = 0; i < teamMembers.length; i++) {
-
-    teamContainer.appendChild(divCard);
-    divCard.classList.add('team-card');
-    teamCard.appendChild(divImage);
-    divImage.appendChild(img);
-    img.src = teamMembers[i].imgUrl;
-    divImage.classList.add('card-image');
-    teamCard.appendChild(divText);
-    divText.classList.add('card-text');
-    let nameOfMember = document.createElement('h3');
-    nameOfMember.innerText = teamMembers[i].name;
-    divText.appendChild(nameOfMember);
-    let roleOfMember = document.createElement('p');
-    roleOfMember.innerText = teamMembers[i].role;
-    divText.appendChild(roleOfMember);
-
-}
+createCards();
 
