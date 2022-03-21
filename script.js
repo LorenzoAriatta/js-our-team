@@ -2,21 +2,26 @@ console.log('JS OK!');
 
 // -------------------- FUNCTIONS -------------------- //
 
-
-// -------------------- / FUNCTIONS -------------------- //
-
 //card creation
 function createCards() {
 
     for (let i = 0; i < teamMembers.length; i++) {
 
+        //div card
+        let divCard = document.createElement('div');
         teamContainer.appendChild(divCard);
         divCard.classList.add('team-card');
-        teamCard.appendChild(divImage);
+
+
+        let divImage = document.createElement('div');
+        divCard.appendChild(divImage);
+        let img = document.createElement('img');
         divImage.appendChild(img);
         img.src = teamMembers[i].imgUrl;
         divImage.classList.add('card-image');
-        teamCard.appendChild(divText);
+
+        let divText = document.createElement('div');
+        divCard.appendChild(divText);
         divText.classList.add('card-text');
         let nameOfMember = document.createElement('h3');
         nameOfMember.innerText = teamMembers[i].name;
@@ -29,6 +34,7 @@ function createCards() {
 
 }
 
+// -------------------- / FUNCTIONS -------------------- //
 
 
 
@@ -36,17 +42,7 @@ function createCards() {
 
 //team container
 let teamContainer = document.querySelector('.team-container');
-//team card
-const teamCard = document.querySelector('.team-card');
-//team photo
-let cardImage = document.querySelector('.card-image');
-let divImage = document.createElement('div');
-let img = document.createElement('img');
-//card text
-let cardText = document.querySelector('.card-text');
-let divText = document.createElement('div');
-//div card
-let divCard = document.createElement('div');
+
 
 // -------------------- / DOM ELEMENTS -------------------- //
 
