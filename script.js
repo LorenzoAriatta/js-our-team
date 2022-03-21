@@ -5,17 +5,23 @@ console.log('JS OK!');
 
 // -------------------- / FUNCTIONS -------------------- //
 
+//card creation
+//function createCards() {
 
+
+//}
 
 
 // -------------------- DOM ELEMENTS -------------------- //
 
 //team container
-const teamContainer = document.querySelector('team-container');
+let teamContainer = document.querySelector('team-container');
 //team card
 const teamCard = document.querySelector('team-card');
 //card text
-const cardText = document.querySelector('card-text');
+let cardText = document.querySelector('card-text');
+//div card
+let divCard = document.createElement('div');
 
 // -------------------- / DOM ELEMENTS -------------------- //
 
@@ -62,5 +68,16 @@ const teamMembers = [
     }
 ];
 
-
+console.log(teamMembers.length);
 // -------------------- / GENERAL -------------------- // 
+
+
+
+
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+    teamContainer.appendChild(divCard);
+
+
+}
